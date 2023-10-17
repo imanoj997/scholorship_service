@@ -9,7 +9,7 @@ class ScholarshipListView(views.APIView):
     """
     Lists all available scholarships.
     """
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
 
     @swagger_auto_schema(
         operation_description="Retrieve a list of all available scholarships.",
