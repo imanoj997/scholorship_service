@@ -1,5 +1,5 @@
 """
-URL configuration for scholorship_service project.
+URL configuration for scholarship_service project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -25,11 +25,11 @@ from django.conf.urls.static import static
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="ScholorshipService API",
+        title="ScholarshipService API",
         default_version='v1',
-        description="APIs for scholorshipservice application",
-        contact=openapi.Contact(email="scholorshipservice@yopmail.com"),
-        license=openapi.License(name="ScholorshipService License"),
+        description="APIs for scholarshipservice application",
+        contact=openapi.Contact(email="scholarshipservice@yopmail.com"),
+        license=openapi.License(name="ScholarshipService License"),
     ),
     public=True,
     permission_classes=(permissions.AllowAny,),
@@ -38,7 +38,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('scholorship/', include('scholorship.urls')),
+    path('scholarship/', include('scholorship.urls')),
     path('', schema_view.with_ui('swagger', cache_timeout=0),
          name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc',
